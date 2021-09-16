@@ -3,6 +3,15 @@ from db.run_sql import run_sql
 from models.country import Country
 from models.city import City
 
+def save(country):
+    sql = "INSERT INTO countries (name, continent, language) VALUES (%s, %s, %s) RETURNING *"
+    values = [country.name, country.continent, country.language]
+    results = run_sql(sql, values)
+    id = results[0]['id']
+    country.id = id
+    return country 
+
+
 def delete_all():
     sql = "DELETE  FROM countries"
     run_sql(sql)
