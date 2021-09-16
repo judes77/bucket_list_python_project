@@ -5,5 +5,5 @@ from models.country import Country
 import repositories.country_repository as country_repository
 
 def delete_all():
-    sql = "DELETE  FROM city"
+    sql = "DELETE  FROM cities"
     run_sql(sql)
