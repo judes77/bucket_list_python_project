@@ -49,7 +49,7 @@ INSERT INTO cities (name, visited, country_id) VALUES ('Boston', 'True', 10);
 INSERT INTO cities (name, visited, country_id) VALUES ('Nairn', 'True', 8);
 INSERT INTO cities (name, visited, country_id) VALUES ('Newcastle', 'True', 9);
 INSERT INTO cities (name, visited, country_id) VALUES ('Lagos', 'True', 13);
-INSERT INTO cities (name, visited, country_id) VALUES ('PortLisbona', 'True', 13);
+INSERT INTO cities (name, visited, country_id) VALUES ('Lisbon', 'True', 13);
 
 SELECT * FROM countries
 
