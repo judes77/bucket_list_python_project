@@ -15,10 +15,10 @@ country2 = Country('Portugal', 'Europe', 'Portuguese')
 country_repository.save(country2)
 
 # print(country_repository.save(country1))
-# print(country_repository.save(country2))
+print(country_repository.save(country2))
 
 # print(country_repository.select_all())
 
-print(country_repository.select(country1.id))
+# print(country_repository.select(country1.id))
 
 pdb.set_trace()

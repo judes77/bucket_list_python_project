@@ -29,10 +29,20 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = Country(result['name'], result['continent'], result['language'])
+        country = Country(result['name'], result['continent'], result['language'], result['id'])
     return country
 
 
 def delete_all():
     sql = "DELETE  FROM countries"
     run_sql(sql)
+
+def delete(id):
+    sql = "DELETE  FROM countries WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(country):
+    sql = "UPDATE countries SET (name, continent, language) = (%s, %s, %s) WHERE id = %s"
+    values = [country.name, country.continent, country.language, country.id]
+    run_sql(sql, values)

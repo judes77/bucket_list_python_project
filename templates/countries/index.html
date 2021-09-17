@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Escapes Bucket List - Countries</h2>
+
+{% for country in all_countries %}
+
+		<p>Country: {{ country.name }}</p>
+        <p>Continent: {{ country.continent }}</p>
+        <p>Language: {{ country.language }}</p>
+	     <br>
+         
+{% endfor %}
+
+<button><a href="/countries/new">Add New Country</a></button>
+
+
+{% endblock content %}
