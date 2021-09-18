@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = Country(row['name'], row['continent'], row['language'])
+        country = Country(row['name'], row['continent'], row['language'], row['id'])
         countries.append(country)
     return countries
 
