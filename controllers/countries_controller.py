@@ -1,7 +1,4 @@
-from typing import ValuesView
 from db.run_sql import run_sql
-from itertools import count
-import re
 from flask import Blueprint, Flask, redirect, render_template, request
 
 from models.country import Country

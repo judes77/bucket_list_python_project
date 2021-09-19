@@ -17,7 +17,7 @@ def save(city):
 def select_all():
     cities = []
 
-    sql = "SELECT * FROM CITIES"
+    sql = "SELECT * FROM cities"
     results = run_sql(sql)
 
     for row in results:
@@ -28,7 +28,7 @@ def select_all():
 
 def select(id):
     city = None
-    sql = "SELECT * FROM tasks WHERE id = %s"
+    sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
 
