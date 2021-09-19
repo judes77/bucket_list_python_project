@@ -7,7 +7,12 @@
     <div>
         <p>City: {{ city.name }}</p>
         <p>Country: {{ city.country.name }}</p>
-        <p>Visited: {{ city.visited }}</p>
+        
+        {% if city.visited == True %}
+      <i class="fa fa-check fa-2x" style="color: green;" aria-hidden="true"></i>
+    {% else %}
+      <i class="fa fa_times fa-2x" aria-hidden="true"></i>
+    {% endif %}
         <button><a href="/cities/{{ city.id }}/edit">Update</a></button>
         <section> 
         <form class="delete-form" action="/cities/{{city.id}}/delete" method="POST">
@@ -15,7 +20,8 @@
           </form>
         <br>
     </div>
-
+    
     {% endfor %}
 
+<button><a href="/cities/new">Add New City</a></button>
 {% endblock %}
