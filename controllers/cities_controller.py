@@ -19,3 +19,9 @@ def cities():
 def new_city():
    countries = country_repository.select_all()
    return render_template('cities/new.html', all_countries = countries) 
+
+# DELETE
+@cities_blueprint.route('/cities/<id>/delete', methods=['POST'])
+def delete_cities(id):
+    city_repository.delete(id)
+    return redirect('/cities')
