@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<section>
-    Travel Bucket List
-</section>
+
+<h2>Hello</h2>
+{% for country in all_countries %}
+<h2>Hello</h2>
+
+
+   
+       
+    
+
+    <p>Country: {{ country.name }}</p>
+    <p>Continent: {{ country.continent }}</p>
+    <p>Language: {{ country.language }}</p>
+
+{% endfor %}
+
 {% endblock content %}

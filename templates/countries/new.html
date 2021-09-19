@@ -3,16 +3,22 @@
 {% block content %}
  <h2>Country Form</h2>   
 <h3>Please use the form below to add a new country to your 'Travel Bucket List'</h3>
+
 <form action="/countries" method="post" id="form1">
-<label for="country name">Country name</label>
-<input type="text" name="name" placeholder="name">
+ <div>   
+    <label for="country name">Country name</label>
+    <input type="text" name="name" placeholder="name">
+</div>
 
-<label for="continent">Continent</label>
-<input type="text" name="continent" placeholder="continent">
+<div>
+    <label for="continent">Continent</label>
+    <input type="text" name="continent" placeholder="continent">
+</div>
 
-<Rlabel for="language">Language</label>
+<div>
+<label for="language">Language</label>
 <input type="text" name="language" placeholder="language">
-
+</div>
 
 <button type="submit" form="form1" value="Submit">Submit</button>
 </form>

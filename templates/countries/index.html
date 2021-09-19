@@ -1,22 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Escapes Bucket List - Countries</h2>
 
 {% for country in all_countries %}
 
-<section>
-        <a href="/countries/{{country.id}}">{{country.name}}</a>  
-    <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
-      <input type="submit" value="delete">
-      </form>
-      <div>
-  </div>
-  <br>
-{% endfor %}
-</section>
 
-<button><a href="countries/new">Create new country</a></button>
+   
+       
+    
+    <div>
+        <p>Country: {{ country.name }}</p>
+        <p>Continent: {{ country.continent }}</p>
+        <p>Language: {{ country.language }}</p>
+        
+        <button><a href="/countries/{{ country.id }}/edit">Update</a></button>
+        <button><a href="/countries">Delete</a></button>
+        
+        
+    </div>
+    <br>
+    {% endfor %}
+
+
+<button><a href="/countries/new">Add New Country</a></button>
+
 
 
 {% endblock content %}
