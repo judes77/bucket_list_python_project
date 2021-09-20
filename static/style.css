@@ -18,13 +18,14 @@ nav > h1{
 header {
     display: flex;
     justify-content: flex-start;
-    color: lightgoldenrodyellow;
+    background-color: hsl(59, 82%, 66%);
+    
 }
 
 .title {
     
     margin-left: 50px;
-    color: rgb(135, 198, 219);
+    color: rgb(21, 149, 223);
 }
 
 .description{
@@ -32,11 +33,14 @@ header {
 }
 
 .lists {
-    list-style-type: square;
+    list-style-type: disc;
 }
 html {
-    background-color: rgb(135, 198, 219);
+    background-color: rgb(245, 241, 209);
+}
 
+.photos {
+    margin-left: 20px;
 }
 /* city/index.html */
 
