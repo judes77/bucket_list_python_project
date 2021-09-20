@@ -22,11 +22,21 @@ header {
 }
 
 .title {
-   margin-left: 50px;
+    
+    margin-left: 50px;
 }
 
+.description{
+    margin-right: 400px;
+}
 
+.lists {
+    list-style-type: square;
+}
+html {
+    background-color: rgb(135, 198, 219);
 
+}
 /* city/index.html */
 
 
