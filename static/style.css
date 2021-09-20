@@ -1,0 +1,55 @@
+/*index.html*/
+
+
+
+
+
+
+
+    
+    
+    
+/* base.html */
+nav > h1{
+    text-align: center;
+    color: blue;
+    font-size: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.title {
+   margin-left: 50px;
+}
+
+
+
+/* city/index.html */
+
+
+
+
+/* city/edit.html */
+
+
+
+
+/* city/new.html */
+
+
+
+
+/* country/index.html */
+
+
+
+
+/* country/edit.html */
+
+
+
+
+/* country/new.html */
