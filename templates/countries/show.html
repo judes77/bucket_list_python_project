@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+        <p>Continent: {{ country.continent }}</p>
+        <p>Language: {{ country.language }}</p>
+
+        {% if country.visited == True %}
+        <p>Visited: &#x2714</p>
+        {% else %}
+        <p>Visited: &#x2716</p>
+        {% endif %}
+<img src="https://source.unsplash.com/500x500/?{{country.name}}" alt="">
+
+{% endblock content %}

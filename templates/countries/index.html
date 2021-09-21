@@ -4,27 +4,13 @@
 <h2>Countries</h2>
 {% for country in all_countries %}
 
-
-   
-       
-   
-    <div class ="list">        
-        <p>Country: {{ country.name }}</p>
-        <p>Continent: {{ country.continent }}</p>
-        <p>Language: {{ country.language }}</p>
-
-        {% if country.visited == True %}
-        <p>Visited: &#x2714</p>
-        {% else %}
-        <p>Visited: &#x2716</p>
-        {% endif %}
-    
-        <button><a href="/countries/{{ country.id }}/edit">Update</a></button>
+    <a href="/countries/{{country.id}}">{{country.name}}</a><br>
+      
+    <button><a href="/countries/{{ country.id }}/edit">Update</a></button>
         
-        <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
-          <input type="submit" value="Delete" style="color: blue;">
-          </form>
-        </div>
+    <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
+    <input type="submit" value="Delete" style="color: blue;">
+    </form>
       <br>
         
     <br>
