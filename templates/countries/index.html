@@ -1,24 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Countries</h2>
+<h1>You can view each Country by clicking on the Country name.</h1>
+<br>
+<br>
 {% for country in all_countries %}
-
-    <a href="/countries/{{country.id}}">{{country.name}}</a><br>
-      
+<section>
+    <a class="countryname" href="/countries/{{country.id}}">{{country.name}}</a>
+      <br>
+      <br>
     <button><a href="/countries/{{ country.id }}/edit">Update</a></button>
-        
+      <br>
+      <br>  
     <form class="delete-form" action="/countries/{{country.id}}/delete" method="POST">
     <input type="submit" value="Delete" style="color: blue;">
     </form>
       <br>
-        
-    <br>
+      <br>
     {% endfor %}
-
+  
 
 <button><a href="/countries/new">Add New Country</a></button>
-
+</section>
 
 
 {% endblock content %}
