@@ -18,6 +18,21 @@
     <label for="language">Language</label>
     <input type="text" name="language" id="language" value="{{country.language}}" required>
 </div>
+
+
+<div>
+    <label for="visited">Visited</label>
+    <select name="visited" id="visited">
+        <option value="true">
+            {% if country.visited == True %}{% endif %}
+            True
+        </option>
+        <option value="false">
+            {% if country.visited == False %}{% endif %}
+            False
+        </option>
+    </select>
+</div>
 <button type="submit">Update</button>
 
 </form>

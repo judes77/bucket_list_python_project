@@ -8,11 +8,16 @@
    
        
    
-    <div class ="list">        
+    <div>       
         <p>Country: {{ country.name }}</p>
         <p>Continent: {{ country.continent }}</p>
         <p>Language: {{ country.language }}</p>
-      
+
+        {% if country.visited == True %}
+        <p>Visited: &#x2714</p>
+        {% else %}
+        <p>Visited: &#x2716</p>
+        {% endif %}
     
         <button><a href="/countries/{{ country.id }}/edit">Update</a></button>
         

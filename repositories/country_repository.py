@@ -4,8 +4,8 @@ from models.country import Country
 from models.city import City
 
 def save(country):
-    sql = "INSERT INTO countries (name, continent, language) VALUES (%s, %s, %s) RETURNING *"
-    values = [country.name, country.continent, country.language]
+    sql = "INSERT INTO countries (name, continent, language, visited) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [country.name, country.continent, country.language, country.visited]
     results = run_sql(sql, values)
     id = results[0]['id']
     country.id = id
@@ -18,7 +18,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = Country(row['name'], row['continent'], row['language'], row['id'])
+        country = Country(row['name'], row['continent'], row['language'], row['visited'], row['id'])
         countries.append(country)
     return countries
 
@@ -29,7 +29,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = Country(result['name'], result['continent'], result['language'], result['id'])
+        country = Country(result['name'], result['continent'], result['language'], result['visited'], result['id'])
     return country
 
 
@@ -43,6 +43,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(country):
-    sql = "UPDATE countries SET (name, continent, language) = (%s, %s, %s) WHERE id = %s"
-    values = [country.name, country.continent, country.language, country.id]
+    sql = "UPDATE countries SET (name, continent, language, visited) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [country.name, country.continent, country.language, country.visited, country.id]
     run_sql(sql, values)

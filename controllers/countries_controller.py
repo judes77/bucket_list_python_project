@@ -25,6 +25,7 @@ def create_country():
     name = request.form['name']
     continent = request.form['continent']
     language = request.form['language']
+    # visited = request.form['visited']
     country = Country(name, continent, language)
     country_repository.save(country)
     return redirect('/countries')
@@ -47,7 +48,8 @@ def update_country(id):
     name = request.form['name']
     continent = request.form['continent']
     language = request.form['language']
-    country = Country(name, continent, language, id)
+    visited = request.form['visited']
+    country = Country(name, continent, language, visited, id)
     country_repository.update(country)
     return redirect('/countries')
 
