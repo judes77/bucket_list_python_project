@@ -1,7 +1,11 @@
 /*index.html*/
+.photos {
+    margin-left: 20px;
+}
 
-
-
+.description{
+    margin-left: 23px
+}
 
 
 
@@ -13,14 +17,19 @@ nav > h1{
     text-align: center;
     font-size: 40px;
     list-style: none;
+    color: rgb(21, 149, 223);
+}
+
+.border {
+    color: rgb(21, 149, 223);
 }
 
 header {
     display: flex;
     justify-content: flex-start;
     background-color: hsl(59, 82%, 66%);
-    border-color: black;
-    
+    border: 2px solid;
+    border-color: rgb(21, 149, 223);;
 }
 
 .title {
@@ -30,20 +39,11 @@ header {
     
 }
 
-.description{
-    margin-right: 400px;
-}
 
-.lists {
-    list-style-type: disc;
-}
 html {
     background-color: rgb(245, 241, 209);
 }
 
-.photos {
-    margin-left: 20px;
-}
 /* city/index.html */
 
 body > h1 {
@@ -54,6 +54,21 @@ body > h1 {
 
 .cityname {
     font-size: 27px;
+    text-align: center;
+
+}
+
+.city-container {
+    border: 2px solid;
+    padding: 10px;
+    width: 130px;
+    height: 200px;
+}
+
+.city-list-container {
+    display: flex;
+    justify-content: space-around;
+    
 }
 
 
@@ -68,11 +83,26 @@ body > h1 {
 /* city/new.html */
 
 
+/* cities/show.html */
+
+
 
 
 /* country/index.html */
 .countryname {
     font-size: 27px;
+}
+
+.country-container {
+    border: 2px solid;
+    padding: 10px;
+    width: 130px;
+    height: 200px;
+}
+
+.country-list-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -82,3 +112,16 @@ body > h1 {
 
 
 /* country/new.html */
+
+
+
+/* country/show.html */
+
+.show-list-container {
+    border: 3px solid;
+    padding: 10px;
+    width: 120px;
+    height: 120px;
+    border-color: rgb(21, 149, 223);
+
+}

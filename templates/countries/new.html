@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
-{% block content %}
- <h2>Country Form</h2>   
+{% block content %}   
 <h3>Please use the form below to add a new country to your 'Travel Bucket List'</h3>
-
+<div class="country-form-contianer"></div>
 <form action="/countries" method="post" id="form1">
  <div>   
     <label for="country name">Country name</label>
@@ -22,4 +21,6 @@
 
 <button type="submit" form="form1" value="Submit">Submit</button>
 </form>
+<br>
+<img src="https://source.unsplash.com/500x500/?{COUNTRY}" alt="photo of country">
 {% endblock content %}

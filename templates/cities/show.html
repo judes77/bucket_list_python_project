@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<br>
+<div class="show-list-container">
+
 <p>City: {{ city.name }}</p> 
 <p>Country: {{ city.country.name }}</p>
 
@@ -10,7 +13,8 @@
 {% else %}
 <p>Visited: &#x2716</p>
 {% endif %}
-
+</div>
+<br>
 <button><a href="/cities">Back to Cities</a></button>
 <img src="https://source.unsplash.com/500x500/?{{city.name}}" alt="photo of city">
 {% endblock content %}

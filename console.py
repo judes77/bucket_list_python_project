@@ -25,7 +25,7 @@ country7 = Country('Usa', 'Americas', 'English')
 country_repository.save(country7)
 country8 = Country('Portugal', 'Europe', 'Portuguese')
 country_repository.save(country8)
-country9 = Country('Scotland', 'Europe', 'English')
+country9 = Country('France', 'Europe', 'English')
 country_repository.save(country9)
 country10 = Country('England', 'Europe', 'English')
 country_repository.save(country10)
@@ -34,26 +34,24 @@ country_repository.save(country11)
 country12 = Country('Austrlia', 'Australia', 'English')
 country_repository.save(country12)
 
-
-
-
-
-
-
 city1 = City('Edinburgh', country3)
 city_repository.save(city1)
 city2 = City('Barcelona', country1)
 city_repository.save(city2)
+city3 = City('Nairn', country3)
+city_repository.save(city3)
+city4 = City('London', country4)
+city_repository.save(city4)
+city5 = City('Auckland', country5)
+city_repository.save(city5)
+city6 = City('Sydney', country6)
+city_repository.save(city6)
+city7 = City('New York', country7)
+city_repository.save(city7)
+city8 = City('Paris', country8)
+city_repository.save(city8)
 
-# print(country_repository.save(country1))
-# print(country_repository.save(country2))
 
-print(country_repository.select_all())
-
-# print(country_repository.select(country1.id))
-# print(city_repository.select_all())
-
-# print(city_repository.save(city1))
 
 
 
