@@ -114,12 +114,14 @@ body > h1 {
 /* country/edit.html */
 
 
-
+h2 {
+    color: rgb(21, 149, 223);
+}
 
 /* country/new.html */
 
 h3 {
-    color: ;
+    color: rgb(21, 149, 223);
 }
 
 /* country/show.html */
@@ -127,8 +129,10 @@ h3 {
 .show-list-container {
     border: 3px solid;
     padding: 10px;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-color: rgb(21, 149, 223);
+
+    
 
 }
