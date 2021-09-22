@@ -64,15 +64,15 @@ body > h1 {
 
 .city-container {
     border: 2px solid;
-    padding: 10px;
-    width: 130px;
-    height: 200px;
+    margin: 20px;
+    width: 180px;
+    height: 220px;
 }
 
 .city-list-container {
     display: flex;
     justify-content: space-around;
-    
+    flex-flow: wrap
 }
 
 
